@@ -1,0 +1,14 @@
+.navigation{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    list-style: none;
+    margin: 0;
+}
+
+.toolbar{
+  position: fixed;
+  // make sure toolbar will stay on top of the content as it scrols past
+  z-index: 2;
+}

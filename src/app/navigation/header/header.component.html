@@ -1,0 +1,16 @@
+<mat-toolbar class="toolbar" [ngClass]="!isSmallScreen? 'navigation': ''">
+    <div *ngIf="isSmallScreen">
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon fontIcon="menu"></mat-icon>
+        </button>
+    </div>
+    
+    <div  *ngIf="!isSmallScreen">
+        <button mat-button color="primary">EPL</button>
+        <button mat-button color="primary">LA LIGA</button>
+        <button mat-button color="primary">SERIE A</button>
+        <button mat-button color="primary">BUNGESLIGA</button>
+        <button mat-button color="primary">LIGUE 1</button>
+    </div>
+
+</mat-toolbar>

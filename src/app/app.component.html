@@ -1,1 +1,28 @@
-<p>Footy Web</p>
+<app-layout>
+   
+    <div class="container">
+        <mat-toolbar color="primary" class="navigation">
+            <div>
+                <span>NewYeti Sport</span>
+            </div>
+        </mat-toolbar>
+
+        <mat-sidenav  
+            #sidenav
+            class="sidenav"
+            [mode]="isSmallScreen? 'over' : 'side'" 
+            [opened]="!isSmallScreen? false: ''"
+            [fixedInViewport]="isSmallScreen" [fixedTopGap]="isSmallScreen? 115 : 130">
+            <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-container class="sidenav-container">
+            <mat-sidenav-content>
+                <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+                <main class="main-container">
+                    <router-outlet></router-outlet>
+                </main>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</app-layout>
