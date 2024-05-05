@@ -3,12 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html, body {height: 100%;}
-body { margin: 0px; font-family: Roboto, "Helvetica Neue", sans-serif;}
-
-.shadow-effect {
-    border: none;
-    box-shadow: 0px 0px 33px -10px rgb(71, 114, 254, 0.3);
-}
+body { margin: 0px; font-family: Roboto, arial, sans-serif;}
 
 :root {
     --primary-color: #494f54;
@@ -26,6 +21,11 @@ body {
     color: var(--body-text-color);
 }
 
+.shadow-effect .mat-toolbar{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgb(71, 114, 254, 0.3);
+}
+
 .mt-1 {
     margin-top: 5px;
 }
@@ -37,4 +37,10 @@ body {
 .ms-1{
     margin-left: 5px;
     margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+  .menu-button{
+    width: 200px;
+}
 }

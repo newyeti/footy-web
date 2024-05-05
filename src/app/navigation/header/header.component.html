@@ -1,16 +1,36 @@
-<mat-toolbar class="toolbar" [ngClass]="!isSmallScreen? 'navigation': ''">
-    <div *ngIf="isSmallScreen">
-        <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon fontIcon="menu"></mat-icon>
-        </button>
-    </div>
-    
-    <div  *ngIf="!isSmallScreen">
-        <button mat-button color="primary">EPL</button>
-        <button mat-button color="primary">LA LIGA</button>
-        <button mat-button color="primary">SERIE A</button>
-        <button mat-button color="primary">BUNGESLIGA</button>
-        <button mat-button color="primary">LIGUE 1</button>
-    </div>
+<mat-toolbar class="toolbar" color="primary" >
+     <mat-toolbar-row>
+         <div *ngIf="isSmallScreen" [ngClass]="!isSmallScreen? 'navigation': ''">
+            <button mat-icon-button (click)="onToggleSidenav()">
+                <mat-icon fontIcon="menu"></mat-icon>
+            </button>
+        </div>
+        <div class="company">
+            <span>NewYeti Sport</span>
+        </div>
 
+        <div class="fill-space"></div>
+
+        <div *ngIf="!isSmallScreen">
+            <button mat-button>EPL</button>
+            <button mat-button>LA LIGA</button>
+            <button mat-button>SERIE A</button>
+            <button mat-button>BUNGESLIGA</button>
+            <button mat-button>LIGUE 1</button>
+        </div>
+
+        <div class="fill-space"></div>
+     </mat-toolbar-row>
+
+     <mat-toolbar-row >
+        <div class="fill-space"></div>
+        <div class="button-row button-row-margin">
+            <button mat-button class="menu-button stroke-button">Matches</button>
+            <button mat-button class="menu-button">Standings</button>
+            <button mat-button class="menu-button">Stat</button>
+            <button mat-button class="menu-button">Players</button>
+        </div>
+
+        <div class="fill-space"></div>
+     </mat-toolbar-row>
 </mat-toolbar>

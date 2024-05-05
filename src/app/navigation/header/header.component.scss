@@ -1,3 +1,6 @@
+.company{
+  padding: 0px 10px;
+}
 .navigation{
     display: flex;
     flex-flow: row wrap;
@@ -11,4 +14,45 @@
   position: fixed;
   // make sure toolbar will stay on top of the content as it scrols past
   z-index: 2;
+}
+
+.mat-toolbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Apply a shadow to the toolbar */
+}
+
+.mat-mdc-button{
+    font-weight: normal;
+    border-radius: 0%;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.content-meuu {
+  justify-content: center;
+}
+
+.button-row {
+  display: table-cell;
+  max-width: 700px;
+}
+
+.button-row .mat-mdc-button{
+  font-size: 12px;
+}
+
+.button-row-margin{
+  margin-top:20px;
+}
+
+.stroke-button {
+  border-bottom: 2px solid; /* Set border width and style */
+  background-color: transparent; /* Set background color to transparent */
+}
+
+@media (min-width: 768px) {
+ .button-row-margin{
+  margin-top:28px;
+}
 }

@@ -1,25 +1,25 @@
 <app-layout>
    
     <div class="container">
-        <mat-toolbar color="primary" class="navigation">
+        <!-- <mat-toolbar color="primary" class="navigation">
             <div>
                 <span>NewYeti Sport</span>
             </div>
-        </mat-toolbar>
+        </mat-toolbar> -->
 
         <mat-sidenav  
             #sidenav
             class="sidenav"
             [mode]="isSmallScreen? 'over' : 'side'" 
             [opened]="!isSmallScreen? false: ''"
-            [fixedInViewport]="isSmallScreen" [fixedTopGap]="isSmallScreen? 115 : 130">
+            [fixedInViewport]="isSmallScreen" [fixedTopGap]="isSmallScreen? 58 : 130">
             <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
         </mat-sidenav>
 
         <mat-sidenav-container class="sidenav-container">
             <mat-sidenav-content>
                 <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-                <main class="main-container">
+                <main class="main-container main-wrapper">
                     <router-outlet></router-outlet>
                 </main>
             </mat-sidenav-content>
