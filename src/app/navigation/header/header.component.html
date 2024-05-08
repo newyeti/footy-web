@@ -12,11 +12,45 @@
         <div class="fill-space"></div>
 
         <div *ngIf="!isSmallScreen">
-            <button mat-button>EPL</button>
-            <button mat-button>LA LIGA</button>
-            <button mat-button>SERIE A</button>
-            <button mat-button>BUNGESLIGA</button>
-            <button mat-button>LIGUE 1</button>
+            <button 
+                mat-button
+                [ngClass]="{
+                    'highlight-menu': selectedLeague=='epl'
+                }"
+                (click)="setActiveLeague('epl')" 
+                >EPL</button>
+            
+            <button 
+                mat-button
+                [ngClass]="{
+                    'highlight-menu': selectedLeague=='laliga'
+                }"
+                (click)="setActiveLeague('laliga')" 
+                >LA LIGA</button>
+            
+            <button 
+                mat-button
+                [ngClass]="{
+                    'highlight-menu': selectedLeague=='seriea'
+                }"
+                (click)="setActiveLeague('seriea')" 
+                >SERIE A</button>
+
+            <button 
+                mat-button
+                [ngClass]="{
+                    'highlight-menu': selectedLeague=='bundesliga'
+                }"
+                (click)="setActiveLeague('bundesliga')" 
+                >BUNGESLIGA</button>
+
+            <button 
+                mat-button
+                [ngClass]="{
+                    'highlight-menu': selectedLeague=='ligue1'
+                }"
+                (click)="setActiveLeague('ligue1')" 
+                >LIGUE 1</button>
         </div>
 
         <div class="fill-space"></div>
@@ -25,10 +59,28 @@
      <mat-toolbar-row >
         <div class="fill-space"></div>
         <div class="button-row button-row-margin">
-            <button mat-button class="menu-button stroke-button" routerLink="fixture">Matches</button>
-            <button mat-button class="menu-button" routerLink="standings">Standings</button>
-            <button mat-button class="menu-button" routerLink="stat">Stat</button>
-            <button mat-button class="menu-button" routerLink="players">Players</button>
+            <button mat-button 
+                class="menu-button" 
+                (click)="setActiveTab('fixture')"
+                [ngClass]="selectedTab=='fixture'? 'stroke-button' : ''"
+                routerLink="fixture">Matches</button>
+            <button mat-button 
+                class="menu-button" 
+                (click)="setActiveTab('standings')"
+                [ngClass]="selectedTab=='standings'? 'stroke-button' : ''"
+                routerLink="standings">Standings</button>
+            
+            <button mat-button 
+                class="menu-button" 
+                (click)="setActiveTab('stat')"
+                [ngClass]="selectedTab=='stat'? 'stroke-button' : ''"
+                routerLink="stat">Stat</button>
+            
+            <button mat-button 
+                class="menu-button" 
+                (click)="setActiveTab('players')"
+                [ngClass]="selectedTab=='players'? 'stroke-button' : ''"
+                routerLink="players">Players</button>
         </div>
 
         <div class="fill-space"></div>

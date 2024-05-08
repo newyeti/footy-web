@@ -20,7 +20,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Apply a shadow to the toolbar */
 }
 
-.mat-mdc-button{
+.mat-mdc-button, .mat-mdc-raised-button{
     font-weight: normal;
     border-radius: 0%;
 }
@@ -49,6 +49,11 @@
 .stroke-button {
   border-bottom: 2px solid; /* Set border width and style */
   background-color: transparent; /* Set background color to transparent */
+}
+
+.highlight-menu{
+  background-color:white;
+  color: black !important;
 }
 
 @media (min-width: 768px) {

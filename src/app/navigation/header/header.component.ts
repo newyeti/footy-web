@@ -32,4 +32,12 @@ export class HeaderComponent {
   onToggleSidenav() {
     this.sidenavToggle.emit();
   }
+
+  setActiveLeague(leagueName: string) {
+    this.selectedLeague = leagueName;
+  }
+
+  setActiveTab(tabName: string) {
+    this.selectedTab = tabName;
+  }
 }
