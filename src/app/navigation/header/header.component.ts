@@ -14,10 +14,20 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   @Output() public sidenavToggle = new EventEmitter<void>();
+  @Output() public selectedMenu = new EventEmitter<string>();
+  @Input() public selectedLeague: string = 'epl';
 
   public isSmallScreen: boolean = false;
-  public selectedLeague: string = 'epl';
+
   public selectedTab = 'fixture';
+
+  public menulist: string[] = [
+    'epl',
+    'laliga',
+    'bundesliga',
+    'seriea',
+    'ligue1',
+  ];
 
   constructor(private breakPointObserver: BreakpointObserver, router: Router) {}
 
@@ -35,6 +45,7 @@ export class HeaderComponent {
 
   setActiveLeague(leagueName: string) {
     this.selectedLeague = leagueName;
+    this.selectedMenu.emit(leagueName);
   }
 
   setActiveTab(tabName: string) {

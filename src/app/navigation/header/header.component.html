@@ -12,45 +12,16 @@
         <div class="fill-space"></div>
 
         <div *ngIf="!isSmallScreen">
-            <button 
-                mat-button
-                [ngClass]="{
-                    'highlight-menu': selectedLeague=='epl'
-                }"
-                (click)="setActiveLeague('epl')" 
-                >EPL</button>
-            
-            <button 
-                mat-button
-                [ngClass]="{
-                    'highlight-menu': selectedLeague=='laliga'
-                }"
-                (click)="setActiveLeague('laliga')" 
-                >LA LIGA</button>
-            
-            <button 
-                mat-button
-                [ngClass]="{
-                    'highlight-menu': selectedLeague=='seriea'
-                }"
-                (click)="setActiveLeague('seriea')" 
-                >SERIE A</button>
-
-            <button 
-                mat-button
-                [ngClass]="{
-                    'highlight-menu': selectedLeague=='bundesliga'
-                }"
-                (click)="setActiveLeague('bundesliga')" 
-                >BUNGESLIGA</button>
-
-            <button 
-                mat-button
-                [ngClass]="{
-                    'highlight-menu': selectedLeague=='ligue1'
-                }"
-                (click)="setActiveLeague('ligue1')" 
-                >LIGUE 1</button>
+            @for (item of menulist; track item) {
+                <button 
+                    mat-button
+                    [ngClass]="{
+                        'highlight-menu': selectedLeague==item
+                    }"
+                    (click)="setActiveLeague(item)" >
+                        {{item | uppercase}}
+                </button>
+            }
         </div>
 
         <div class="fill-space"></div>

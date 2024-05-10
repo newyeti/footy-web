@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   title = 'footy-web';
 
   public isSmallScreen: boolean = false;
+  public selectedSideMenu: string = 'epl';
 
   constructor(
     private breakPointObserver: BreakpointObserver,
@@ -45,5 +46,9 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(() => {
       this.sidenav.close();
     });
+  }
+
+  setActiveMenu(menu: string) {
+    this.selectedSideMenu = menu;
   }
 }

@@ -1,7 +1,18 @@
-<mat-nav-list>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">EPL</a>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">LA LIGA</a>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">SERIE A</a>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">BUNGESLIGA</a>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">LIGUE 1</a>
+<mat-nav-list #item>
+    @for (item of menulist; track item) {
+        <a mat-list-item 
+            [ngClass]="{
+            'highlight-menu': selectedLeague==item
+                }"
+            (click)="setActiveLeague(item)"
+            routerLink="/item">
+            <span 
+                [ngClass]="{
+                    'highlight-menu-name': selectedLeague==item,
+                    'menu-name': selectedLeague!=item,
+                }">
+                {{item | uppercase}}
+            </span>
+        </a>
+    }
 </mat-nav-list>

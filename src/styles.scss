@@ -12,7 +12,7 @@ body { margin: 0px; font-family: Roboto, arial, sans-serif;}
     --warn-color: #901b1b;
     --navbar-footer-color: #FBFBFB;
     --body-text-color: #3f3e3e;
-    --toolbar-background-color: whitesmoke;
+    --toolbar-background-color: #494f54;
 }
 
 body {
@@ -44,3 +44,8 @@ body {
     width: 200px;
 }
 }
+
+// .mdc-list-item__primary-text{
+//     color: red !important; /* Red color for primary text */
+//     font-weight: bold; /* Example of making it bold */
+// }
