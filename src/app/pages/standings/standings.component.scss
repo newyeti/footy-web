@@ -2,23 +2,28 @@ table {
   width: 100%;
 }
 
-.mat-mdc-form-field {
-  font-size: 12px;
-  width: 30%;
-  margin-top: 10px;
-}
-
 .circle { 
     display: inline-block; 
     line-height: 0px; 
     border-radius: 50%; 
-    font-size: 12px; 
-    background-color: green; 
+    font-size: 11px; 
     color: white; 
-    font-weight: bold;
+    font-weight: normal;
     margin-right: 4px;
 } 
-  
+
+.won{
+  background-color: green; 
+}
+
+.drawn{
+  background-color: gray;
+}
+
+.lost{
+  background-color: red;
+}
+
 .circle span { 
     display: inline-block; 
     padding-top: 50%; 

@@ -1,3 +1,35 @@
-<section>
-    <p>matches works!</p>
-</section>
+<div class="content-wrapper">
+    <div>
+        <mat-form-field>
+            <mat-label>Seasons</mat-label>
+            <mat-select [(value)]="currentSeason">
+                @for (season of seasons; track season) {
+                    <mat-option [value]="season.value">{{season.viewValue}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Clubs</mat-label>
+            <mat-select >
+                @for (club of clubs; track club) {
+                    <mat-option [value]="club.value">{{club.viewValue}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+    
+    <div class="fixtures-container">
+        <div *ngFor="let day of fixtureDays" class="fixture-day">
+            <h3>{{ day.date | date: 'fullDate' }}</h3>
+            <div *ngFor="let match of day.matches" class="match-row">
+                <div class="teams">
+                    <span class="homeTeam">{{ match.homeTeam }}</span>
+                    <span class="time">{{ match.time }}</span>
+                    <span class="awayTeam">{{ match.awayTeam }}</span>
+                </div>
+                <div class="venue">{{ match.venue }}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

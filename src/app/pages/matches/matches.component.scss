@@ -1,0 +1,53 @@
+.fixtures-container {
+  width: 100%;
+  margin: auto;
+}
+
+.fixture-day {
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #4b0082;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.match-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.teams {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeTeam {
+  font-weight: bold;
+  min-width: 150px;
+  text-align: right;
+}
+
+.awayTeam {
+  font-weight: bold;
+  min-width: 200px;
+  text-align: left;
+}
+
+
+.time {
+  margin: 0 10px;
+  color: #888;
+  text-align: center;
+}
+
+.venue {
+  flex: 1;
+  text-align: right;
+  color: #888;
+}

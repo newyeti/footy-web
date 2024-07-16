@@ -8,82 +8,92 @@
         </mat-select>
     </mat-form-field>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let row"> {{row.position}} </td>
-  </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let row"> {{row.position}} </td>
+    </ng-container>
 
-  <!-- Club Column -->
-  <ng-container matColumnDef="club">
-    <th mat-header-cell *matHeaderCellDef> Club </th>
-    <td mat-cell *matCellDef="let row"> {{row.club}} </td>
-  </ng-container>
+    <!-- Club Column -->
+    <ng-container matColumnDef="club">
+        <th mat-header-cell *matHeaderCellDef> Club </th>
+        <td mat-cell *matCellDef="let row"> {{row.club}} </td>
+    </ng-container>
 
-  <!-- Played Column -->
-  <ng-container matColumnDef="played">
-    <th mat-header-cell *matHeaderCellDef> Played </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.played}} </td>
-  </ng-container>
+    <!-- Played Column -->
+    <ng-container matColumnDef="played">
+        <th mat-header-cell *matHeaderCellDef> Played </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.played}} </td>
+    </ng-container>
 
-  <!-- Won Column -->
-  <ng-container matColumnDef="won">
-    <th mat-header-cell *matHeaderCellDef> Won </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.won}} </td>
-  </ng-container>
+    <!-- Won Column -->
+    <ng-container matColumnDef="won">
+        <th mat-header-cell *matHeaderCellDef> Won </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.won}} </td>
+    </ng-container>
 
-  <!-- Lost Column -->
-  <ng-container matColumnDef="lost">
-    <th mat-header-cell *matHeaderCellDef> Lost </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.lost}} </td>
-  </ng-container>
+    <!-- Lost Column -->
+    <ng-container matColumnDef="lost">
+        <th mat-header-cell *matHeaderCellDef> Lost </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.lost}} </td>
+    </ng-container>
 
-  <!-- Draw Column -->
-  <ng-container matColumnDef="draw">
-    <th mat-header-cell *matHeaderCellDef> Drawn </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.draw}} </td>
-  </ng-container>
+    <!-- Draw Column -->
+    <ng-container matColumnDef="draw">
+        <th mat-header-cell *matHeaderCellDef> Drawn </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.draw}} </td>
+    </ng-container>
 
-  <!-- Goals Scored Column -->
-  <ng-container matColumnDef="goal_scored">
-    <th mat-header-cell *matHeaderCellDef> GF </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_scored}} </td>
-  </ng-container>
+    <!-- Goals Scored Column -->
+    <ng-container matColumnDef="goal_scored">
+        <th mat-header-cell *matHeaderCellDef> GF </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_scored}} </td>
+    </ng-container>
 
-  <!-- Goals Conceeded Column -->
-  <ng-container matColumnDef="goal_against">
-    <th mat-header-cell *matHeaderCellDef> GA </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_against}} </td>
-  </ng-container>
+    <!-- Goals Conceeded Column -->
+    <ng-container matColumnDef="goal_against">
+        <th mat-header-cell *matHeaderCellDef> GA </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_against}} </td>
+    </ng-container>
 
-  <!-- Goal Diff Column -->
-  <ng-container matColumnDef="goal_diff">
-    <th mat-header-cell *matHeaderCellDef> GD </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_diff}} </td>
-  </ng-container>
+    <!-- Goal Diff Column -->
+    <ng-container matColumnDef="goal_diff">
+        <th mat-header-cell *matHeaderCellDef> GD </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.goal_diff}} </td>
+    </ng-container>
 
-  <!-- Points Column -->
-  <ng-container matColumnDef="points">
-    <th mat-header-cell *matHeaderCellDef> Points </th>
-    <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.points}} </td>
-  </ng-container>
+    <!-- Points Column -->
+    <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef> Points </th>
+        <td mat-cell *matCellDef="let row" class="mat-column-text-align"> {{row.points}} </td>
+    </ng-container>
 
-  <!-- Form Column -->
-  <ng-container matColumnDef="form">
-    <th mat-header-cell *matHeaderCellDef class="mat-column-text-align"> Form </th>
-    <td mat-cell *matCellDef="let row"> 
-        @for (form of row.form; track form) {
-            <span class="circle"> 
-                <span>{{form}}</span> 
-            </span>
-        }
-    </td>
-  </ng-container>
+    <!-- Form Column -->
+    <ng-container matColumnDef="form">
+        <th mat-header-cell *matHeaderCellDef class="mat-column-text-align"> Form </th>
+        <td mat-cell *matCellDef="let row"> 
+            @for (form of row.form; track form) {
+                @if (form == 'W') {
+                    <span class="circle won"> 
+                        <span>{{form}}</span> 
+                    </span>
+                } @else if (form == 'L') {
+                    <span class="circle lost"> 
+                        <span>{{form}}</span> 
+                    </span>
+                } @else {
+                    <span class="circle drawn"> 
+                        <span>{{form}}</span> 
+                    </span> 
+                }
+            }
+        </td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-</table>
+    </table>
 </div>

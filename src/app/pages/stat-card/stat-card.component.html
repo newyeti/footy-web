@@ -1,0 +1,19 @@
+<div class="player-container">
+  <div class="title">{{title}}</div>
+  <div class="player-card">
+    <div class="players-list">
+      @for (player of players; track player) {
+        <div class="player-item">
+          <div class="player-info">
+            <div class="rank">{{player.rank}}</div>
+            <div class="name">
+              <div class="name">{{player.player}}</div>
+              <div class="team">{{player.team}}</div>
+            </div>            
+            <div class="goals">{{player.total}}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

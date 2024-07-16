@@ -48,7 +48,7 @@ const DATA: StandindsTable[] = [
     goal_against: 0,
     goal_diff: 0,
     points: 0,
-    form: 'WWWWW',
+    form: 'WLWDW',
   },
   {
     position: 2,

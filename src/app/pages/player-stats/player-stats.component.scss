@@ -1,0 +1,17 @@
+.player-stats {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.player-stats-container {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}

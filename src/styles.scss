@@ -39,8 +39,17 @@ body {
     margin-right: 5px;
 }
 
+.mat-mdc-form-field {
+  padding: 10px 5px 0px 5px;
+}
+
+.content-wrapper {
+    padding: 20px;
+}
+
 @media (min-width: 768px) {
-  .menu-button{
-    width: 200px;
+    .menu-button{
+        width: 200px;
+    }
 }
-}
+

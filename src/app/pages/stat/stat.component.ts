@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { PlayerStatsComponent } from '../player-stats/player-stats.component';
 
 @Component({
   selector: 'app-stat',
   standalone: true,
-  imports: [],
+  imports: [PlayerStatsComponent],
   templateUrl: './stat.component.html',
-  styleUrl: './stat.component.scss'
+  styleUrl: './stat.component.scss',
 })
-export class StatComponent {
-
-}
+export class StatComponent {}

@@ -1,0 +1,60 @@
+.player-container {
+  max-width: 400px;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  padding: 10px;
+}
+
+.player-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  .rank, .goals{
+    width: 10%;
+    text-align: center;
+  }
+  .name, .team {
+    width: 75%;
+    text-align: left;
+  }
+  .rank {
+    font-weight: bold;
+  }
+  .team {
+    color: gray;
+  }
+}
+
+.goals {
+  font-size: 16;
+  color: #555;
+  font-weight: bold;
+}
+
+.players-list {
+  text-align: left;
+}
+
+.player-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.player-item:last-child {
+  border-bottom: none;
+}
+
